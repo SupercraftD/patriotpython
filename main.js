@@ -1,8 +1,3 @@
-let unitNames = ["Basic Python and Console Interaction", "Conditionals"]
-let units = [
-    ["Printing in Python","Variables and Types"],
-    ["Booleans"]
-];
 
 
   function switchAssignment(u,l){
@@ -123,11 +118,14 @@ let units = [
           output: outf,
           read: builtinRead,
           inputfun: function (promptText) {
+            console.log(promptText)
               return new Promise((resolve) => {
                   const userInput = prompt(promptText);
                   resolve(userInput);
               });
-          }
+          },
+         inputfunTakesPrompt: true
+
       });
 
       Sk.misceval.asyncToPromise(() => Sk.importMainWithBody("<stdin>", false, prog, true))
