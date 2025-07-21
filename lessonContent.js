@@ -1,7 +1,8 @@
-let unitNames = ["Basic Python and Console Interaction", "Conditionals"]
+let unitNames = ["Basic Python and Console Interaction", "Conditionals","Looping"]
 let units = [
     ["Printing in Python","Variables and Types","User Input","Math Operators","String Operators","Comments","Putting it Together"],
-    ["Booleans", "If Statements", "Comparison Operators", "Logical Operators", "Floating Point Numbers and Rounding"]
+    ["Booleans", "If Statements", "Comparison Operators", "Logical Operators", "Floating Point Numbers and Rounding"],
+    ["While Loops","For Loops","Break and Continue","Nested Control Structures", "Guess the Number"]
 ];
 
 
@@ -340,5 +341,116 @@ print("Are they equal now?", a_rounded == b_rounded)  # Now True!
 # You can round any float
 pi = 3.14159265
 print("Rounded pi to 2 decimals:", round(pi, 2))`
+    },
+
+
+
+
+    "While Loops":{
+        header: `The code inside a <code>while</code> loop runs over and over <b>as long as a condition is True</b>.<br>
+    It’s great when you don’t know exactly how many times you’ll need to repeat something.<br><br>
+    <b>Careful!</b> If the condition never becomes <code>False</code>, the loop will go on forever!<br><br>
+    Try running the loop below, then change the condition or the counter to see what happens. Then, write your own while loop that prints all the even numbers from 2 to 20.`,
+
+        code: `# This loop prints numbers from 1 to 5
+count = 1
+
+while count <= 5:
+    print("Count is:", count)
+    count = count + 1  # Make sure to update the counter!
+
+print("Loop is done!")
+`
+    },
+
+    "For Loops":{
+        header: `A <code>for</code> loop runs a block of code a certain number of times. It's perfect when you know how many times you want to repeat something!<br><br>
+    <b>range()</b> is used to generate a list of numbers to loop through. You can give it either 1, 2, or 3 numbers. It works like this:
+    <ul>
+        <li><code>range(stop)</code> — counts from 0 to stop (not including stop)</li>
+        <li><code>range(start, stop)</code> — counts from start to stop (not including stop)</li>
+        <li><code>range(start, stop, step)</code> — counts with a custom step (like +2 or -1)</li>
+    </ul>
+    Try out the examples below — then challenge yourself by printing numbers 1–10 or asking for 10 numbers from the user and adding them up!`,
+
+        code: `# Basic for loop with range
+for i in range(5):
+    print("i is:", i)  # Prints 0 to 4
+
+# Custom start and stop
+for i in range(1, 6):
+    print("Number:", i)  # Prints 1 to 5
+
+# Custom step
+for i in range(0, 10, 2):
+    print("Even number:", i)  # 0, 2, 4, 6, 8
+`
+    },
+
+    "Break and Continue":{
+        header: `Sometimes you want to <b>stop</b> a loop early, or <b>skip</b> over part of it.<br><br>
+    Python gives you two special keywords:
+    <ul>
+        <li><code>break</code> — completely stops the loop</li>
+        <li><code>continue</code> — skips the rest of the loop and moves to the next turn</li>
+    </ul>
+    Try out the examples below, then try writing your own loop that skips or stops at certain numbers!`,
+
+        code: `# BREAK: stop the loop early
+for i in range(1, 10):
+    if i == 5:
+        print("Breaking the loop at", i)
+        break
+    print("i is:", i)
+
+# CONTINUE: skip just one turn
+for i in range(1, 6):
+    if i == 3:
+        print("Skipping 3")
+        continue
+    print("i is:", i)
+
+# You can use break and continue in while loops too!
+count = 0
+while count < 10:
+    count += 1
+    if count % 2 == 0:
+        continue  # skip even numbers
+    if count == 9:
+        break     # stop before 9
+    print("Odd count:", count)`
+    },
+
+    "Nested Control Structures":{
+        header: `You can put one control structure (like a loop or an <code>if</code> statement) <b>inside another</b> — this is called <b>nesting</b>.<br><br>
+    For example, you can have an <code>if</code> inside a <code>for</code> loop, or even a loop inside another loop.<br>
+    This lets you create more powerful programs, like drawing grids or checking multiple conditions.<br><br>
+    Try the examples below, and then create your own nested loop!`,
+
+        code: `# if inside a loop
+for i in range(1, 6):
+    if i % 2 == 0:
+        print(i, "is even")
+    else:
+        print(i, "is odd")
+
+# loop inside a loop (nested for loop)
+for row in range(3):
+    for col in range(4):
+        print("(", row, ",", col, ")", end=" ")
+    print()  # new line after each row
+
+# Challenge: Print a number grid
+# Example:
+# 1 2 3
+# 4 5 6
+# 7 8 9`
+    },
+
+    "Guess the Number":{
+        header:`Use what you learned about loops to create a simple Guess the Number game.<br>
+        Decide on a certain number, then keep getting user input until they select the correct number.<br><br>
+        <b>Challenge</b>: For every incorrect guess, tell the user if the number is higher or lower!`,
+        code:``
     }
 }
