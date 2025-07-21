@@ -1,8 +1,9 @@
-let unitNames = ["Basic Python and Console Interaction", "Conditionals","Looping"]
+let unitNames = ["Basic Python and Console Interaction", "Conditionals","Looping","Functions and Exceptions"]
 let units = [
     ["Printing in Python","Variables and Types","User Input","Math Operators","String Operators","Comments","Putting it Together"],
     ["Booleans", "If Statements", "Comparison Operators", "Logical Operators", "Floating Point Numbers and Rounding"],
-    ["While Loops","For Loops","Break and Continue","Nested Control Structures", "Guess the Number"]
+    ["While Loops","For Loops","Break and Continue","Nested Control Structures", "Guess the Number"],
+    ["Functions", "Functions and Parameters", "Namespaces in Functions","Fix this Program", "Functions and Return Values","Exceptions"]
 ];
 
 
@@ -452,5 +453,168 @@ for row in range(3):
         Decide on a certain number, then keep getting user input until they select the correct number.<br><br>
         `,
         code:``
+    },
+
+
+
+
+
+
+
+    "Functions":{
+        header: `Functions are like mini-programs inside your program. They let you organize your code, avoid repeating yourself, and make your code easier to read.<br><br>
+    To create a function, use <code>def</code>, give it a name, and write the code you want it to run.<br>
+    To run (or "call") the function, just use its name followed by parentheses.<br><br>
+    Everytime you call the function, it runs the code inside it.<br><br>
+    Read through the code below and try to understand it, then try making your own function and calling it multiple times!`,
+
+        code: `# Define a function
+def say_hello():
+    print("Hello!")
+    print("Welcome to the program.")
+
+# Call the function
+say_hello()
+
+# You can call it as many times as you want
+say_hello()
+say_hello()
+
+# Try making your own function!
+def cheer():
+    print("You got this!")
+
+cheer()`
+    },
+
+    "Functions and Parameters":{
+        header: `You can give functions <b>parameters</b>, which are like variables the function uses when it runs.<br>
+    When you call the function, you pass in <b>arguments</b> — the actual values you want to use.<br><br>
+    This lets your functions be flexible and reusable for different situations!<br><br>
+    Look at the examples below. Notice how the function uses its parameters in the code. It is used like a normal variable, but it gets its value from the arguments you pass in when you call the function.<br>
+    Try changing the values passed in when calling the function.`,
+
+        code: `# Function with one parameter
+def greet(name):
+    print("Hello,", name + "!")
+
+greet("Alice")
+greet("Bob")
+
+# Function with two parameters
+def add_numbers(a, b):
+    print("The sum is:", a + b)
+
+add_numbers(3, 5)
+add_numbers(10, 20)
+
+# Try your own!
+def repeat(word, times):
+    print(word * times)
+
+repeat("hi", 3)`
+    },
+
+    "Namespaces in Functions":{
+        header: `When you create a variable, it exists in a certain <b>scope</b> or <b>namespace</b> — a part of the program where the variable is visible.<br><br>
+    <b>Local variables</b> are created inside a function and only exist while that function is running.<br>
+    <b>Global variables</b> are created outside of all functions and can be used by the whole program.<br><br>
+
+    If you try to use a local variable outside its function, you’ll get an error.<br><br>
+
+    If a local variable has the same name as a global one, the function will use the local version. The global one stays unchanged.<br><br>
+    Try editing the variables below to see how Python handles different scopes!`,
+
+        code: `# This is a global variable
+message = "Hello from the outside!"
+
+def speak():
+    # This is a local variable with the same name
+    message = "Hello from inside the function!"
+    print(message)
+
+print("Before function call:", message)
+speak()
+print("After function call:", message)
+
+# Local variables can't be used outside their function
+def example():
+    x = 42  # local variable
+    print("Inside function:", x)
+
+example()
+# print(x)  # This will cause an error: x is not defined
+
+# You can read global variables inside a function
+name = "Alice"
+
+def say_name():
+    print("Your name is", name)
+
+say_name()`
+    },
+
+    "Fix this Program":{
+        header: `There is a bug in the code below. Fix it.<br><br>
+        <b>Hint:</b> The variable is used in the wrong namespace<br>`,
+
+        code: `
+def print_name():
+    name = "Alice"
+    print(name)
+
+print(name)`
+    },
+
+    "Functions and Return Values":{
+        header: `Sometimes you want a function to <b>give back</b> a value when it's done. This is called a <b>return value</b>.<br><br>
+    You use the <code>return</code> keyword to send a result back to wherever the function was called.<br>
+    You can then <b>store</b> that value in a variable, <b>print</b> it, or even <b>pass it into another function</b>.<br><br>
+    When a function returns a value, it stops running and sends that value back immediately.<br><br>
+    You can use function calls that return values just like any other value or variable in Python.<br>
+    Try playing with the return values below and combining them in different ways!`,
+
+        code: `# A basic return value
+def add(a, b):
+    return a + b
+
+result = add(3, 4)
+print("Result is:", result)
+
+# Return values can be used directly
+print("5 + 6 =", add(5, 6))
+
+# You can pass return values into other functions
+def square(x):
+    return x * x
+
+print("Square of 3 + 2:", square(add(3, 2)))
+
+# Nesting functions
+def double(n):
+    return n * 2
+
+print("Double the square of 4:", double(square(4)))
+
+# Storing return values in variables
+a = add(1, 2)
+b = square(a)
+c = double(b)
+print("Final result:", c)`
+    },
+
+    "Exceptions":{
+        header: `Sometimes your code can run into problems, like trying to divide by zero or using a variable that doesn't exist.<br>
+    When this happens, Python raises an <b>exception</b> — a special error message that tells you something went wrong.<br><br>
+    Usually, if an exception happens, your program stops running.
+    You can handle exceptions using <code>try</code> and <code>except</code> blocks. This way, your program can continue running even if an error occurs! Your code will try to run the code inside the <code>try</code> block, and if an exception happens, it will jump to the <code>except</code> block instead of crashing.<br><br>
+    A common exception is the ValueError, which happens when you try to convert something that isn't a number into a number.<br>
+    Try running the code below and see what happens when the user inputs something that isn't a number!<br>`,
+    code: `# Example of handling exceptions
+try:
+    value = int(input("Enter a number: "))
+    print("You entered:", value)
+except ValueError:
+    print("That's not a valid number!")`
     }
 }
