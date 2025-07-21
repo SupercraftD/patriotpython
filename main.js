@@ -20,7 +20,7 @@
     for (let lesson in units[unit]){
         let li = document.createElement("li")
         let a = document.createElement("a")
-        a.href = "#"+lesson
+        a.href = "#"+unit+lesson
         a.textContent = units[unit][lesson]
         a.onclick = function(){
             switchAssignment(parseInt(unit),parseInt(lesson))

@@ -1,7 +1,7 @@
 let unitNames = ["Basic Python and Console Interaction", "Conditionals"]
 let units = [
     ["Printing in Python","Variables and Types","User Input","Math Operators","String Operators","Comments","Putting it Together"],
-    ["Booleans"]
+    ["Booleans", "If Statements", "Comparison Operators", "Logical Operators", "Floating Point Numbers and Rounding"]
 ];
 
 
@@ -175,5 +175,170 @@ print("Code with comments is easier to read!")`
         </ul>
         Or, be creative!`,
         code:``
+    },
+
+
+
+
+
+
+    "Booleans":{
+        header: `Booleans are a special type of value in Python that can only be one of two things:<br>
+    <ul>
+        <li><code>True</code></li>
+        <li><code>False</code></li>
+    </ul>
+    They’re used to represent yes/no, on/off, or true/false ideas in code.<br><br>
+    Try changing the values below or making your own!`,
+
+        code: `# Boolean values
+is_hungry = True
+is_sleepy = False
+
+print("Hungry:", is_hungry)
+print("Sleepy:", is_sleepy)
+
+# You can also just print them directly
+print(True)
+print(False)`
+    },
+    
+    "If Statements":{
+        header: `An <code>if</code> statement lets your code make decisions.<br>
+    If something is <code>True</code>, Python will run the code inside the <code>if</code> block.<br><br>
+    You can also use <code>if/else</code> to run one thing if it's <code>True</code>, and something else if it's <code>False</code>.<br><br>
+    In this lesson, we’ll use <code>True</code> and <code>False</code> directly. We’ll learn how to test conditions later!<br>
+    Read the code below. Look at each <code>if</code> statement, and try to find which lines are part of the block and will be run. Try changing the boolean values and see how the output changes.`,
+
+        code: `# Using if
+is_raining = True
+
+if is_raining:
+    print("Take an umbrella!")
+
+# Using if/else
+is_hungry = False
+
+if is_hungry:
+    print("Time to eat!")
+else:
+    print("Not hungry right now.")
+
+# You can test different values by changing True/False
+wants_ice_cream = True
+
+if wants_ice_cream:
+    print("Here's your ice cream!")
+else:
+    print("No ice cream for now.")`
+    },
+
+    "Comparison Operators":{
+        header: `Now that you know how booleans and <code>if</code> statements work, let’s talk about <b>comparison operators</b>.<br><br>
+    These let you <b>compare values</b> in Python and get a <code>True</code> or <code>False</code> result.
+    <ul>
+        <li><code>==</code> : equal to</li>
+        <li><code>!=</code> : not equal to</li>
+        <li><code>></code> : greater than</li>
+        <li><code><</code> : less than</li>
+        <li><code>>=</code> : greater than or equal to</li>
+        <li><code><=</code> : less than or equal to</li>
+    </ul>
+    You can use these inside <code>if</code> statements to control your code.<br><br>
+    Try changing the numbers and see how the results change! (Also, investigate how <code>elif</code> works!)`,
+
+        code: `# Basic comparisons
+print(5 == 5)    # True
+print(3 != 4)    # True
+print(10 > 2)    # True
+print(7 < 7)     # False
+print(6 >= 6)    # True
+print(8 <= 3)    # False
+
+# Using comparisons in if statements
+score = 85
+
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:
+    print("Grade: B")
+elif score >= 70:
+    print("Grade: C")
+else:
+    print("Grade: D or lower")
+
+# Try your own!
+age = 13
+
+if age < 13:
+    print("You're a kid!")
+elif age < 18:
+    print("You're a teenager!")
+else:
+    print("You're an adult!")`
+    },
+
+    "Logical Operators":{
+        header: `Sometimes you want to check more than one condition at the same time. That’s where <b>logical operators</b> come in.<br><br>
+    These operators let you combine or modify boolean values:
+    <ul>
+        <li><code>and</code> : True only if <i>both</i> sides are True</li>
+        <li><code>or</code> : True if <i>at least one</i> side is True</li>
+        <li><code>not</code> : Flips True to False, and False to True</li>
+    </ul>
+    Try changing the values and watching how the output changes!`,
+
+        code: `# Logical operators with booleans
+is_raining = True
+has_umbrella = False
+
+if is_raining and has_umbrella:
+    print("You stay dry!")
+else:
+    print("You might get wet!")
+
+# OR: only one side needs to be True
+is_sunny = False
+wants_to_go_outside = True
+
+if is_sunny or wants_to_go_outside:
+    print("Going outside!")
+else:
+    print("Staying indoors.")
+
+# NOT: flips the value
+is_tired = False
+
+if not is_tired:
+    print("You're ready to go!")
+else:
+    print("Take a nap.")`
+    },
+
+    "Floating Point Numbers and Rounding":{
+        header: `Floating point numbers are numbers with decimals, like <code>3.14</code> or <code>0.5</code>.<br>
+    But because of how computers store these numbers, sometimes math with decimals is a little bit off.<br><br>
+    For example, you'd expect <code>0.0037 == 0.37 / 100</code> to be <code>True</code>, but it’s actually <code>False</code> because of tiny rounding errors inside the computer.<br><br>
+    To fix this, you can use the <code>round()</code> function to round numbers to a certain number of decimal places before comparing them.`,
+
+        code: `# Floating point math looks normal at first
+a = 0.3
+b = 0.1+0.2
+
+print("a:", a)
+print("b:", b)
+print("Are they equal?", a == b)  # This will print False!
+
+# Let's round both numbers to 5 decimal places
+a_rounded = round(a, 5)
+b_rounded = round(b, 5)
+
+print("Rounded a:", a_rounded)
+print("Rounded b:", b_rounded)
+print("Are they equal now?", a_rounded == b_rounded)  # Now True!
+
+# You can round any float
+pi = 3.14159265
+print("Rounded pi to 2 decimals:", round(pi, 2))`
     }
 }
