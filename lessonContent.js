@@ -72,7 +72,7 @@ print("You are", height, "feet tall!")`
     <b>Order of operations</b> follows PEMDAS: parentheses first, then exponents, multiplication/division, and finally addition/subtraction.<br><br>
     Try changing the numbers and operators in the examples below. At the end, create your own math expression and see what it evaluates to!`,
 
-        ode: `# Basic math operations
+        code: `# Basic math operations
 a = 10
 b = 3
 
