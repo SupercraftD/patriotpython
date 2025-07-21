@@ -450,7 +450,7 @@ for row in range(3):
     "Guess the Number":{
         header:`Use what you learned about loops to create a simple Guess the Number game.<br>
         Decide on a certain number, then keep getting user input until they select the correct number.<br><br>
-        <b>Challenge</b>: For every incorrect guess, tell the user if the number is higher or lower!`,
+        `,
         code:``
     }
 }
