@@ -3,7 +3,14 @@
 function switchAssignment(u,l){
   document.getElementById("assignmenttitle").innerHTML = `${u+1}.${l+1}: ${units[u][l]}`;
   document.getElementById("header").innerHTML = lessonContents[units[u][l]].header;
-  document.getElementById("code").value = lessonContents[units[u][l]].code;
+  
+  if (lessonContents[units[u][l]].noExample){
+    document.getElementById("code").value = lessonContents[units[u][l]].code;
+  }else if (lessonContents[units[u][l]].code != ""){
+    document.getElementById("code").value = `###### EXAMPLE CODE #####\n`+lessonContents[units[u][l]].code+`\n\n###### WRITE YOUR CODE HERE #####\n`;
+  }else{
+    document.getElementById("code").value = `###### WRITE YOUR CODE HERE #####\n`;
+  }
 }
 
 for (let unit in units){

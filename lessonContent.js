@@ -562,6 +562,7 @@ say_name()`
     },
 
     "Fix this Program":{
+        noExample:true,
         header: `There is a bug in the code below. Fix it.<br><br>
         <b>Hint:</b> The variable is used in the wrong namespace<br>`,
 
@@ -649,6 +650,7 @@ print(my_string[-5])   # o
     },
 
     "Challenge: Initials":{
+        noExample:true,
         header: `Write a function that has two parameters, a first name and a last name and returns the initials (like "J.D.").<br>
         Use string indexing to get the first letter of each part of the name.<br>`,
         code: `def get_initials(first_name, last_name):
@@ -714,6 +716,7 @@ for i in range(len(my_string)):
     },
 
     "Challenge: Palindromes":{
+        noExample:true,
         header: `A <b>palindrome</b> is a word or phrase that reads the same forwards and backwards, like "racecar" or "level".<br>
         Write a function that checks if a given string is a palindrome.<br>`,
         code: `def is_palindrome(s):
@@ -794,6 +797,7 @@ print(my_string.replace("World", "Python"))  # " Hello, Python! "
     },
 
     "Project: Pig Latin":{
+        noExample:true,
         header: `Pig Latin is a fun way to play with words! The rules are simple:
         <ul>
             <li>If a word starts with a consonant, move the first letter to the end and add "ay".</li>
@@ -897,6 +901,7 @@ for index, value in enumerate(my_list):
     },
 
     "Challenge: Find List Max":{
+        noExample:true,
         header:`Write a function that takes a list of numbers and returns the maximum value in the list.<br>
         You can use a for loop to go through each item in the list and keep track of the largest number you find.<br>`,
         code: `def find_max(numbers):
@@ -947,6 +952,7 @@ print("Count of 4:", count)
     },
 
     "Project: Shopping List":{
+        noExample:true,
         header:`Create a simple shopping list program that lets the user add, remove, and view items in their list.<br>
         Use list methods like <code>append()</code> and <code>remove()</code> to manage the list.<br><br>
         Some starter code to manage a menu and user input has been provided. Fill in the blank functions:<br>`,
@@ -1040,6 +1046,7 @@ print("Evens:", evens)
     },
 
     "Challenge: List Comprehension Filtering":{
+        noExample:true,
         header:`Write a list comprehension that creates a new list containing only the even numbers from the original list.<br>`,
         code: `original = [1,2,3,4,5,6,7,8,9,10,16,18,23,20]
 evens = [] #fill in your list comprehension line!`
@@ -1132,6 +1139,7 @@ print("c is a:", c is a)  # True, because they are the same object in memory
     },
 
     "Project: Contact Book":{
+        noExample:true,
         header:`Create a simple contact book program that lets the user add, remove, and view contacts.<br>
         Each contact should have a name and a phone number, stored in a dictionary.<br>
         Use the <code>in</code> keyword to check if a contact exists before removing it.<br><br>
