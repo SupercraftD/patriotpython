@@ -16,7 +16,7 @@ let units = [
 
 let lessonContents={
     "Printing in Python":{
-        header:`This is an example python program that prints to the console.<br>Notice how each print statement makes a new line on the console.<br>Experiment with removing parentheses, quotation marks, and adding new lines.<br>Finally, print three fun facts about yourself to the console, each on a different line.`,
+        header:`This is an example python program that prints to the console.<br>Notice how each print statement makes a new line on the console.<br>Experiment with removing parentheses, quotation marks, and adding new lines.<br><br> Your Task: print three fun facts about yourself to the console, each on a different line.`,
         code:`print("hello world!")\nprint("this is a second line!")`
     },
     "Variables and Types": {
@@ -38,7 +38,8 @@ let lessonContents={
 
         To make or update a variable in python, we use assignment statements. It looks like this:<br>
         <code>variable_name = "any value"</code><br><br>
-        Investigate and experiment with the code below. Try making your own variables and modifying existing ones!`,
+        Investigate and experiment with the code below.<br><br>
+        Your Task: Try making your own variables and modifying existing ones!`,
         code: `# This is a comment. Python ignores comments.\n# Let's create some variables!\n\nname = "Alice"         # a string\nage = 13               # an integer\nheight = 5.3           # a float\nlikes_python = True    # a boolean\n\n# Let's print them!\nprint("Name:", name)\nprint("Age:", age)\nprint("Height:", height)\nprint("Likes Python:", likes_python)`
     },
     
@@ -46,8 +47,8 @@ let lessonContents={
         header: `You can ask the user questions using the <code>input()</code> function. It always gives you a <b>string</b>, even if the user types a number.<br><br>
     To do math or comparisons, you’ll need to convert the input to another type like <code>int</code> (for whole numbers) or <code>float</code> (for decimals).<br><br>
     To do this, we use functions like <code>int()</code> or <code>float()</code>. See the code below to see how they work!<br><br>
-    Read through the given code below. Try running this code, then experiment by entering your own name and age.<br>
-    Then change it to ask for your favorite number, convert it to an <code>int</code>, and multiply it!`,
+    Read through the given code below. Try running this code, then experiment by entering your own name and age.<br><br>
+    Your Task: change it to ask for your favorite number, convert it to an <code>int</code>, and multiply it!`,
 
         code: `
 # Ask the user for their name and age
@@ -79,7 +80,7 @@ print("You are", height, "feet tall!")`
         <li><code>**</code> : Exponentiation (power)</li>
     </ul>    
     <b>Order of operations</b> follows PEMDAS: parentheses first, then exponents, multiplication/division, and finally addition/subtraction.<br><br>
-    Try changing the numbers and operators in the examples below. At the end, create your own math expression and see what it evaluates to!`,
+    Your Task: Try changing the numbers and operators in the examples below. At the end, create your own math expression and see what it evaluates to!`,
 
         code: `# Basic math operations
 a = 10
@@ -121,7 +122,8 @@ print("My math expression result:", my_math)`
         <li><code>*</code> : Repeats a string multiple times. Can only be used with a string and an integer.</li>
     </ul>
     You can’t directly add a number to a string, you’ll need to convert the number using <code>str()</code> first.<br><br>
-    Try experimenting with combining strings and numbers and the different operations. Read through the code and investigate if anything confuses you!`,
+    Try experimenting with combining strings and numbers and the different operations. Read through the code and investigate if anything confuses you!<br><br>
+    Your Task: Ask the user for a string and a number, then print the string repeated that many times!`,
 
         code: `# Concatenating strings
 first = "Hello"
@@ -158,7 +160,8 @@ print(emoji * 10)`
         <li><code>#</code> : Single-line comment</li>
         <li>Triple quotes (<code>'''</code> or <code>"""</code>) : Multi-line comment</li>
     </ul>
-    Use comments to explain your thinking or remind yourself of what your code is doing. It makes your code easier to understand!`,
+    Use comments to explain your thinking or remind yourself of what your code is doing. It makes your code easier to understand!<br><br>
+    Your Task: Add comments to the code below to explain what each part does. Then, write a short program that prints a message and includes comments about what it does!`,
 
         code: `# This is a single-line comment
 print("Hello")  # This prints a message
@@ -199,7 +202,8 @@ print("Code with comments is easier to read!")`
         <li><code>False</code></li>
     </ul>
     They’re used to represent yes/no, on/off, or true/false ideas in code.<br><br>
-    Try changing the values below or making your own!`,
+    Try changing the values below or making your own!<br><br>
+    Your Task: Create two boolean values that describe something about you and print them out!`,
 
         code: `# Boolean values
 is_hungry = True
@@ -217,8 +221,8 @@ print(False)`
         header: `An <code>if</code> statement lets your code make decisions.<br>
     If something is <code>True</code>, Python will run the code inside the <code>if</code> block.<br><br>
     You can also use <code>if/else</code> to run one thing if it's <code>True</code>, and something else if it's <code>False</code>.<br><br>
-    In this lesson, we’ll use <code>True</code> and <code>False</code> directly. We’ll learn how to test conditions later!<br>
-    Read the code below. Look at each <code>if</code> statement, and try to find which lines are part of the block and will be run. Try changing the boolean values and see how the output changes.`,
+    In this lesson, we’ll use <code>True</code> and <code>False</code> directly. We’ll learn how to test conditions later!<br><br>
+    Your Task: Read the code below. Look at each <code>if</code> statement, and try to find which lines are part of the block and will be run. Try changing the boolean values and see how the output changes.`,
 
         code: `# Using if
 is_raining = True
@@ -255,7 +259,7 @@ else:
         <li><code><=</code> : less than or equal to</li>
     </ul>
     You can use these inside <code>if</code> statements to control your code.<br><br>
-    Try changing the numbers and see how the results change! (Also, investigate how <code>elif</code> works!)`,
+    Your task: Try changing the numbers and see how the results change! (Also, investigate how <code>elif</code> works!), Then write your own code to compare two user-inputted numbers`,
 
         code: `# Basic comparisons
 print(5 == 5)    # True
@@ -296,7 +300,8 @@ else:
         <li><code>or</code> : True if <i>at least one</i> side is True</li>
         <li><code>not</code> : Flips True to False, and False to True</li>
     </ul>
-    Try changing the values and watching how the output changes!`,
+    Try changing the values and watching how the output changes!<br><br>
+    Your Task: create variables is_hungry and has_snack and use logical operators to print different messages based on their values.`,
 
         code: `# Logical operators with booleans
 is_raining = True
@@ -329,7 +334,8 @@ else:
         header: `Floating point numbers are numbers with decimals, like <code>3.14</code> or <code>0.5</code>.<br>
     But because of how computers store these numbers, sometimes math with decimals is a little bit off.<br><br>
     For example, you'd expect <code>0.0037 == 0.37 / 100</code> to be <code>True</code>, but it’s actually <code>False</code> because of tiny rounding errors inside the computer.<br><br>
-    To fix this, you can use the <code>round()</code> function to round numbers to a certain number of decimal places before comparing them.`,
+    To fix this, you can use the <code>round()</code> function to round numbers to a certain number of decimal places before comparing them.<br><br>
+    Your Task: Find another example of floating point math that doesn't work as expected, then use <code>round()</code> to fix it!`,
 
         code: `# Floating point math looks normal at first
 a = 0.3
@@ -359,7 +365,8 @@ print("Rounded pi to 2 decimals:", round(pi, 2))`
         header: `The code inside a <code>while</code> loop runs over and over <b>as long as a condition is True</b>.<br>
     It’s great when you don’t know exactly how many times you’ll need to repeat something.<br><br>
     <b>Careful!</b> If the condition never becomes <code>False</code>, the loop will go on forever!<br><br>
-    Try running the loop below, then change the condition or the counter to see what happens. Then, write your own while loop that prints all the even numbers from 2 to 20.`,
+    Try running the loop below, then change the condition or the counter to see what happens.<br><br>
+    Your Task: write your own while loop that prints all the even numbers from 2 to 20.`,
 
         code: `# This loop prints numbers from 1 to 5
 count = 1
@@ -380,7 +387,8 @@ print("Loop is done!")
         <li><code>range(start, stop)</code> — counts from start to stop (not including stop)</li>
         <li><code>range(start, stop, step)</code> — counts with a custom step (like +2 or -1)</li>
     </ul>
-    Try out the examples below — then challenge yourself by printing numbers 1–10 or asking for 10 numbers from the user and adding them up!`,
+    Try out the examples below —<br><br>
+    Your Task: challenge yourself by printing numbers 1–10 or asking for 10 numbers from the user and adding them up!`,
 
         code: `# Basic for loop with range
 for i in range(5):
@@ -403,7 +411,8 @@ for i in range(0, 10, 2):
         <li><code>break</code> — completely stops the loop</li>
         <li><code>continue</code> — skips the rest of the loop and moves to the next turn</li>
     </ul>
-    Try out the examples below, then try writing your own loop that skips or stops at certain numbers!`,
+    Try out the examples below<br><br>
+    Your Task: try writing your own loop that skips or stops at certain numbers!`,
 
         code: `# BREAK: stop the loop early
 for i in range(1, 10):
@@ -434,7 +443,7 @@ while count < 10:
         header: `You can put one control structure (like a loop or an <code>if</code> statement) <b>inside another</b> — this is called <b>nesting</b>.<br><br>
     For example, you can have an <code>if</code> inside a <code>for</code> loop, or even a loop inside another loop.<br>
     This lets you create more powerful programs, like drawing grids or checking multiple conditions.<br><br>
-    Try the examples below, and then create your own nested loop!`,
+    Your Task: Try the examples below, and then create your own nested loop!`,
 
         code: `# if inside a loop
 for i in range(1, 6):
@@ -475,7 +484,8 @@ for row in range(3):
     To create a function, use <code>def</code>, give it a name, and write the code you want it to run.<br>
     To run (or "call") the function, just use its name followed by parentheses.<br><br>
     Everytime you call the function, it runs the code inside it.<br><br>
-    Read through the code below and try to understand it, then try making your own function and calling it multiple times!`,
+    Read through the code below and try to understand it<br><br>
+    Your Task: try making your own function and calling it multiple times!`,
 
         code: `# Define a function
 def say_hello():
@@ -500,8 +510,8 @@ cheer()`
         header: `You can give functions <b>parameters</b>, which are like variables the function uses when it runs.<br>
     When you call the function, you pass in <b>arguments</b> — the actual values you want to use.<br><br>
     This lets your functions be flexible and reusable for different situations!<br><br>
-    Look at the examples below. Notice how the function uses its parameters in the code. It is used like a normal variable, but it gets its value from the arguments you pass in when you call the function.<br>
-    Try changing the values passed in when calling the function.`,
+    Look at the examples below. Notice how the function uses its parameters in the code. It is used like a normal variable, but it gets its value from the arguments you pass in when you call the function.<br><br>
+    Your Task: Try changing the values passed in when calling the function.`,
 
         code: `# Function with one parameter
 def greet(name):
@@ -532,7 +542,7 @@ repeat("hi", 3)`
     If you try to use a local variable outside its function, you’ll get an error.<br><br>
 
     If a local variable has the same name as a global one, the function will use the local version. The global one stays unchanged.<br><br>
-    Try editing the variables below to see how Python handles different scopes!`,
+    Your Task: Try editing the variables below to see how Python handles different scopes! Then write your own function that uses both a local and a global variable.`,
 
         code: `# This is a global variable
 message = "Hello from the outside!"
@@ -583,7 +593,8 @@ print(name)`
     You can then <b>store</b> that value in a variable, <b>print</b> it, or even <b>pass it into another function</b>.<br><br>
     When a function returns a value, it stops running and sends that value back immediately.<br><br>
     You can use function calls that return values just like any other value or variable in Python.<br>
-    Try playing with the return values below and combining them in different ways!`,
+    Try playing with the return values below and combining them in different ways!<br><br>
+    Your Task: Create a function that returns the negative version of a number.`,
 
         code: `# A basic return value
 def add(a, b):
@@ -620,7 +631,9 @@ print("Final result:", c)`
     Usually, if an exception happens, your program stops running.
     You can handle exceptions using <code>try</code> and <code>except</code> blocks. This way, your program can continue running even if an error occurs! Your code will try to run the code inside the <code>try</code> block, and if an exception happens, it will jump to the <code>except</code> block instead of crashing.<br><br>
     A common exception is the ValueError, which happens when you try to convert something that isn't a number into a number.<br>
-    Try running the code below and see what happens when the user inputs something that isn't a number!<br>`,
+    Try running the code below and see what happens when the user inputs something that isn't a number!<br>
+    <br>
+    Your Task: Find a different type of exception, and then use a try/except block to handle it!`,
     code: `# Example of handling exceptions
 try:
     value = int(input("Enter a number: "))
@@ -641,7 +654,8 @@ except ValueError:
         <code>01234</code><br><br>
         If you try to access an index that is too high or too low, you’ll get an <b>IndexError</b>.<br><br>
         Negative indexes count from the end of the string, with -1 being the last character.<br>
-        Try running the code below and see how indexing works! Then, try accessing characters at different indexes.`,
+        Try running the code below and see how indexing works! Then, try accessing characters at different indexes.<br><br>
+        Your Task: Try accessing characters at different indexes, including negative ones!`,
         code: `# Example string
 my_string = "Hello, World!"
 print(my_string[0])    # H
@@ -672,7 +686,8 @@ print(get_initials("Alice", "Smith"))  # Should return "A.S."`
         You can also use a third number called <b>step</b> to skip characters. The syntax is <code>string[start:end:step]</code>.<br>
         The <b>step</b> is how many characters to skip each time. It can also be negative.<br><br>
         If you leave out <b>start</b>, it defaults to 0. If you leave out <b>end</b>, it goes to the end of the string. If you leave out <b>step</b>, it defaults to 1.<br><br>
-        Try running the code below and see how slicing works! Then, try slicing the string in different ways.`,
+        Try running the code below and see how slicing works!<br> <br>
+        Your Task: try slicing the string in different ways.`,
         code: `# Example string
 my_string = "Hello, World!"
 print(my_string[0:5])    # Hello
@@ -687,7 +702,8 @@ print(my_string[::-1])     # !dlroW ,olleH
         If you try to change a character in a string, you’ll get an error.<br><br>
         Instead, you can create a new string based on the old one with the changes you want.<br>
         You can use slicing to get parts of the string and then combine them with new characters.<br><br>
-        Try running the code below and see how immutability works! Then, try creating your own modified string.`,
+        Try running the code below and see how immutability works!<br><br>
+        Your Task: Create your own string and try to change a character. Then, create a new string with the change you want!`,
         code: `# Example string
 my_string = "Hello, World!"
 # Trying to change a character (this will raise an error)
@@ -704,7 +720,9 @@ print(new_string)  # hello, World!
         Doing this lets you easily access each character one by one.<br><br>
         You can also use the <b>len()</b> function to get the length of the string (the number of characters).<br>
         This is useful if you want to loop through the string using indexes.<br><br>
-        Try running the code below to see how for loops work with strings!`,
+        Try running the code below to see how for loops work with strings!
+        <br><br>
+        Your Task: Try iterating through the string backwards, and print out each character`,
         code: `# Example string
 my_string = "Hello"
 
@@ -738,7 +756,8 @@ print(is_palindrome("level"))  # Should return True
         header: `The <b>in</b> keyword lets you check if a character or substring is inside a string.<br>
         It returns <code>True</code> if the character or substring is found, and <code>False</code> if it’s not.<br><br>
         You can use it in <code>if</code> statements to make decisions based on whether something is in a string.<br><br>
-        Try running the code below and see how the <b>in</b> keyword works!`,
+        Try running the code below and see how the <b>in</b> keyword works!<br><br>
+        Your Task: Create your own string and let the user input a character or substring to check if it’s in the string.`,
         code: `# Example string
 my_string = "Hello, World!"
 
@@ -771,7 +790,8 @@ else:
             <li><code>find()</code> : Finds the first occurrence of a substring</li>
             <li><code>replace()</code> : Replaces a substring with another substring</li>
         </ul>
-        Explore how they are used below:<br>`,
+        Explore how they are used below:<br><br>
+        Your Task: Try using these methods on your own strings!`,
         code: `# Example string
 my_string = " Hello, World! "
 
@@ -831,7 +851,8 @@ print(pig_latin("apple"))  # Should return "appleyay"`
         You can use <code>[]</code> to access individual items in a tuple or use <code>slicing</code>, just like with strings.<br>
         You can also use <code>len()</code> to find out how many items are in a tuple.<br><br>
         Finally, tuples can be concatenated using the <code>+</code> operator, just like strings.<br><br>
-        Experiment with tuples below!`,
+        Experiment with tuples below!<br><br>
+        Your Task: Use tuples to store a list of your favorite numbers, and then print out the first and last numbers.`,
         code: `# Creating a tuple
 my_tuple = (1, 2, 3, "hello", 4.5)
 print("My tuple:", my_tuple)
@@ -856,7 +877,8 @@ print("Combined tuple:", combined_tuple)`
         You can also use <code>len()</code> to find out how many items are in a list.<br><br>
         Lists can be concatenated using the <code>+</code> operator, and you can slice them just like strings.<br>
         You can also convert lists to strings using the <code>join()</code> method, and convert strings to lists using the <code>split()</code> or <code>list()</code> method.<br><br>
-        Try out the examples below!`,
+        Try out the examples below!<br><br>
+        Your Task: "Create a list of your favorite things, then print the first item, the last item, and a slice of the list."`,
         code: `# Creating a list
 my_list = [1, 2, 3, "hello", 4.5]
 print("My list:", my_list)
@@ -891,7 +913,8 @@ print("String to list of characters:", char_list)`
     "For Loops and Lists":{
         header:`You can use <b>for loops</b> to go through each item in a list.<br>
         You can use <code>range()</code> and <code>len()</code> to loop through the indexes of the list, like a string. Or, you can use <code>enumerate()</code> to get both the index and the value at the same time.<br><br>
-        Experiment with the code below!`,
+        Experiment with the code below!<br><br>
+        Your Task: "Create a list of numbers and iterate over it using 3 different for loops: forwards, backwards, and skipping every other number."`,
         code: `# Using a for loop to iterate over a list
 my_list = [1, 2, 3, 4, 5]
 for item in my_list:
@@ -931,7 +954,8 @@ print(find_max([10, 20, 5, 30, 15]))  # Should return 30
             <li><code>reverse()</code> : Reverses the order of items in the list</li>
             <li><code>count()</code> : Counts how many times an item appears in the list</li>
         </ul>
-        Try out these methods below!`,
+        Try out these methods below!<br><br>
+        Your Task: "create an empty list and append numbers to it. Sort it, then print the results."`,
         code: `# Example list
 my_list = [3, 1, 4, 1, 5, 9]
 print("Original list:", my_list)
@@ -1011,7 +1035,8 @@ while True:
         You can create a 2D list by nesting lists inside another list. You can access items using <code>list[row][column]</code>.<br>
         You can also use loops to go through each row and column in the 2D list.<br><br>
         Hint: if you are ever confused, just remember it is a list of lists, so you can access the inner lists just like you would with a normal list and do all the same things.<br><br>
-        Try out the examples below!`,
+        Try out the examples below!<br><br>
+        Your Task: "Ask the user to input a row number and a column number, then create a 2D list with that many rows and columns."`,
         code: `# Creating a 2D list (a grid)
 grid = [
     [1, 2, 3],
@@ -1042,7 +1067,8 @@ for row in grid:
             <li><b>condition</b> is optional and filters which items to include</li>
         </ul>
         List comprehensions can make your code shorter and easier to read.<br>
-        Try out the examples below and see how they work!`,
+        Try out the examples below and see how they work!<br><br>
+        Your Task: "Create a list comprehension that generates the squares of numbers from 0 to 9."`,
         code: `# Basic list comprehension
 squares = [x**2 for x in range(10)]
 print("Squares:", squares)
@@ -1069,7 +1095,8 @@ evens = [] #fill in your list comprehension line!`
 
         Assigning multiple variables at once to a list or tuple is called unpacking.<br>
         You can also use the <code>*</code> operator to unpack a list or tuple into multiple variables.<br><br>
-        Try out the examples below to see how packing and unpacking works!`,
+        Try out the examples below to see how packing and unpacking works!<br><br>
+        Your Task: "Create a tuple with three numbers, then unpack them into separate variables and print them out."`,
         code: `# Packing values
 x=1
 y=2
@@ -1098,7 +1125,7 @@ add_two_numbers(*nums)  # Unpacking the list into the function parameters
         You can access values in a dictionary using the key inside square brackets <code>dict[key]</code>.<br><br>
         The <code>in</code> keyword can be used to check if a key exists in the dictionary.<br>
         It can also be used in for loops to iterate over the keys in the dictionary.<br><br>
-        Explore this example`,
+        Your Task: "Create a dictionary with your name, age, and city, then print out each value using its key."`,
 
         code: `# Creating a dictionary
 my_dict = {
@@ -1131,7 +1158,8 @@ print("Updated age:", my_dict["age"])
         header:`In Python, there are two ways to compare objects: <b>equivalence</b> and <b>identity</b>.<br>
         Equivalence checks if two objects have the same value, while identity checks if they are the exact same object in memory.<br><br>
         You can use <code>==</code> to check equivalence and <code>is</code> to check identity.<br><br>
-        Try running the code below to see how equivalence and identity work!`,
+        Try running the code below to see how equivalence and identity work!<br><br>
+        Your Task: "Create two lists with the same content, then check if they are equivalent and if they are identical. Then, create a third list that is identical to the first one and check its identity."`,
 
         code: `# Equivalence
 a = [1, 2, 3]
