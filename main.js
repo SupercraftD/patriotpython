@@ -80,7 +80,12 @@ function delay(ms) {
 function reset(){
   document.getElementById("console").textContent = ""
 }
-
+var defaultTimeLimit = Sk.execLimit;
+//document.getElementById("stopbtn").disabled = true;
+document.getElementById("stopbtn").addEventListener('click', () => {
+    stopPython();
+    document.getElementById("console").textContent += "\nExecution stopped.";
+});
 // Run button event
 for (let element of document.getElementsByClassName("run-btn")){
   element.addEventListener('click', async () => {
@@ -88,6 +93,8 @@ for (let element of document.getElementsByClassName("run-btn")){
     for (let e of runBtns){
       e.disabled=true;
     }
+    document.getElementById("stopbtn").disabled = false;
+    Sk.execLimit = defaultTimeLimit; // Reset execution limit
     try {
       reset();
       runCode();
@@ -110,7 +117,7 @@ function builtinRead(x) {
     return Sk.builtinFiles["files"][x];
 }
 
-function runCode() {
+async function runCode() {
     const prog = document.getElementById("code").value;
     document.getElementById("console").textContent = ""; // clear output
 
@@ -124,7 +131,9 @@ function runCode() {
                 resolve(userInput);
             });
         },
-        inputfunTakesPrompt: true
+        inputfunTakesPrompt: true,
+        killableWhile: true,
+        killableFor: true,
 
     });
 
@@ -132,5 +141,12 @@ function runCode() {
         .catch(err => outf("\n" + err.toString()));
 }
 
+function stopPython() {
+    Sk.execLimit = 1;
+    Sk.timeoutMsg = function() {
+        Sk.execLimit = defaultTimeLimit;
+        return "Stopped (not really a Timeout)";
+    }
+}
 // Start fresh
 reset();

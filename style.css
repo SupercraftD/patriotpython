@@ -104,6 +104,25 @@
     background: #95a5a6;
     cursor: not-allowed;
   }
+  .stop-btn {
+    background: #c0392b;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: 10px;
+  }
+  .stop-btn:hover:not(:disabled) {
+    background: #e74c3c;
+  }
+  .stop-btn:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+  }
   #dimensioninputs{
     display:flex;
     justify-content: space-around;
