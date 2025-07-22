@@ -1,9 +1,10 @@
-let unitNames = ["Basic Python and Console Interaction", "Conditionals","Looping","Functions and Exceptions"]
+let unitNames = ["Basic Python and Console Interaction", "Conditionals","Looping","Functions and Exceptions","Strings"]
 let units = [
     ["Printing in Python","Variables and Types","User Input","Math Operators","String Operators","Comments","Putting it Together"],
     ["Booleans", "If Statements", "Comparison Operators", "Logical Operators", "Floating Point Numbers and Rounding"],
     ["While Loops","For Loops","Break and Continue","Nested Control Structures", "Guess the Number"],
-    ["Functions", "Functions and Parameters", "Namespaces in Functions","Fix this Program", "Functions and Return Values","Exceptions"]
+    ["Functions", "Functions and Parameters", "Namespaces in Functions","Fix this Program", "Functions and Return Values","Exceptions"],
+    ["Indexing","Challenge: Initials","Slicing","Immutability","Strings and For Loops","Challenge: Palindromes","The in Keyword","String Methods","Project: Pig Latin"]
 ];
 
 
@@ -616,5 +617,189 @@ try:
     print("You entered:", value)
 except ValueError:
     print("That's not a valid number!")`
+    },
+
+
+    //lesson on string indexing that talks about how strings are like lists of characters, square brackets, indexes, how to access characters, out of bounds errors, and negative indexes
+    "Indexing":{
+        header: `In Python, strings are like lists of characters. You can access individual characters using <b>indexing</b>.<br>
+        Each character has a number called an <b>index</b> that tells you its position in the string, starting from 0.<br><br>
+        You can use square brackets <code>[]</code> to get a character at a specific index.<br>
+        The first character is at index 0, the second at index 1, and so on. Put the number inside the square brackets, after the string.<br><br>
+        Example string with each index labeled:<br>
+        <code>hello</code><br>
+        <code>01234</code><br><br>
+        If you try to access an index that is too high or too low, you’ll get an <b>IndexError</b>.<br><br>
+        Negative indexes count from the end of the string, with -1 being the last character.<br>
+        Try running the code below and see how indexing works! Then, try accessing characters at different indexes.`,
+        code: `# Example string
+my_string = "Hello, World!"
+print(my_string[0])    # H
+print(my_string[7])    # W
+print(my_string[-1])   # !
+print(my_string[-5])   # o
+# print(my_string[100]) # IndexError
+        `
+    },
+
+    "Challenge: Initials":{
+        header: `Write a function that has two parameters, a first name and a last name and returns the initials (like "J.D.").<br>
+        Use string indexing to get the first letter of each part of the name.<br>`,
+        code: `def get_initials(first_name, last_name):
+    #write your own code here!
+
+
+print(get_initials("John", "Doe"))  # Should return "J.D."
+print(get_initials("Alice", "Smith"))  # Should return "A.S."`
+    },
+
+    "Slicing":{
+        header: `Slicing lets you get a part of a string by specifying a start and end index.<br>
+        You can use the syntax <code>string[start:end]</code> to get a substring.<br>
+        The <b>start</b> index is included, but the <b>end</b> index is not.<br><br>
+        You can also use a third number called <b>step</b> to skip characters. The syntax is <code>string[start:end:step]</code>.<br>
+        The <b>step</b> is how many characters to skip each time. It can also be negative.<br><br>
+        If you leave out <b>start</b>, it defaults to 0. If you leave out <b>end</b>, it goes to the end of the string. If you leave out <b>step</b>, it defaults to 1.<br><br>
+        Try running the code below and see how slicing works! Then, try slicing the string in different ways.`,
+        code: `# Example string
+my_string = "Hello, World!"
+print(my_string[0:5])    # Hello
+print(my_string[7:12])   # World
+print(my_string[0:12:2]) # Hlo ol!
+print(my_string[::-1])     # !dlroW ,olleH
+        `
+    },
+
+    "Immutability":{
+        header: `Strings in Python are <b>immutable</b>, which means you can’t change them directly.<br>
+        If you try to change a character in a string, you’ll get an error.<br><br>
+        Instead, you can create a new string based on the old one with the changes you want.<br>
+        You can use slicing to get parts of the string and then combine them with new characters.<br><br>
+        Try running the code below and see how immutability works! Then, try creating your own modified string.`,
+        code: `# Example string
+my_string = "Hello, World!"
+# Trying to change a character (this will raise an error)
+# my_string[0] = "h"
+# Instead, create a new string
+new_string = "h" + my_string[1:]
+print(new_string)  # hello, World!
+        `
+    },
+
+    //basic overview of strings and for loops, with normal iteration and using len
+    "Strings and For Loops":{
+        header: `You can use a <b>for loop</b> to go through each character in a string.<br>
+        Doing this lets you easily access each character one by one.<br><br>
+        You can also use the <b>len()</b> function to get the length of the string (the number of characters).<br>
+        This is useful if you want to loop through the string using indexes.<br><br>
+        Try running the code below to see how for loops work with strings!`,
+        code: `# Example string
+my_string = "Hello"
+
+# Using a for loop to iterate through each character
+# char will be set to each character in the string one by one
+for char in my_string:
+    print(char)
+
+#using len() and range() to iterate by index
+for i in range(len(my_string)):
+    print("Character at index", i, "is", my_string[i])
+        `
+    },
+
+    "Challenge: Palindromes":{
+        header: `A <b>palindrome</b> is a word or phrase that reads the same forwards and backwards, like "racecar" or "level".<br>
+        Write a function that checks if a given string is a palindrome.<br>`,
+        code: `def is_palindrome(s):
+    #write your own code here!
+
+# Test the function
+print(is_palindrome("racecar"))  # Should return True
+print(is_palindrome("hello"))    # Should return False
+print(is_palindrome("level"))  # Should return True
+        `
+    },
+
+    "The in Keyword":{
+        header: `The <b>in</b> keyword lets you check if a character or substring is inside a string.<br>
+        It returns <code>True</code> if the character or substring is found, and <code>False</code> if it’s not.<br><br>
+        You can use it in <code>if</code> statements to make decisions based on whether something is in a string.<br><br>
+        Try running the code below and see how the <b>in</b> keyword works!`,
+        code: `# Example string
+my_string = "Hello, World!"
+
+# Check if a character is in the string
+if "H" in my_string:
+    print("Found 'H'!")
+else:
+    print("Did not find 'H'.")
+
+# Check if a substring is in the string
+if "World" in my_string:
+    print("Found 'World'!")
+else:
+    print("Did not find 'World'.")`
+    },
+
+    //explains methods vs functions, how to use them, and the methods: upper(), lower(), isupper(), islower(), swapcase(),strip(),find(),replace()
+    "String Methods":{
+        header: `Methods are special functions that belong to a specific type of data, like strings.<br>
+        You call them using the dot <code>.</code> notation, like <code>string.method()</code>.<br>
+        Methods let you perform actions on the string, like changing its case or finding parts of it.<br><br>
+        Here are some common string methods:<br>
+        <ul>
+            <li><code>upper()</code> : Converts the string to uppercase</li>
+            <li><code>lower()</code> : Converts the string to lowercase</li>
+            <li><code>isupper()</code> : Checks if the string is in uppercase</li>
+            <li><code>islower()</code> : Checks if the string is in lowercase</li>
+            <li><code>swapcase()</code> : Swaps the case of each character</li>
+            <li><code>strip()</code> : Removes leading and trailing whitespace</li>
+            <li><code>find()</code> : Finds the first occurrence of a substring</li>
+            <li><code>replace()</code> : Replaces a substring with another substring</li>
+        </ul>
+        Explore how they are used below:<br>`,
+        code: `# Example string
+my_string = " Hello, World! "
+
+# upper(): Converts the string to uppercase
+print(my_string.upper())  # " HELLO, WORLD! "
+
+# lower(): Converts the string to lowercase
+print(my_string.lower())  # " hello, world! "
+
+# isupper(): Checks if the string is in uppercase
+print(my_string.isupper())  # False
+
+# islower(): Checks if the string is in lowercase
+print(my_string.islower())  # False
+
+# swapcase(): Swaps the case of each character
+print(my_string.swapcase())  # " hELLO, wORLD! "
+
+# strip(): Removes leading and trailing whitespace
+print(my_string.strip())  # "Hello, World!"
+
+# find(): Finds the first occurrence of a substring and returns the index
+print(my_string.find("World"))  # 8
+
+# replace(): Replaces a substring with another substring
+print(my_string.replace("World", "Python"))  # " Hello, Python! "
+        `
+    },
+
+    "Project: Pig Latin":{
+        header: `Pig Latin is a fun way to play with words! The rules are simple:
+        <ul>
+            <li>If a word starts with a consonant, move the first letter to the end and add "ay".</li>
+            <li>If it starts with a vowel, just add "yay" to the end.</li>
+        </ul>
+        Write a function that takes a string and converts it to Pig Latin.<br>
+        You can use string methods and indexing to help you.<br>`,
+        code: `def pig_latin(word):
+    #write your own code here!
+
+# Test the function
+print(pig_latin("hello"))  # Should return "ellohay"
+print(pig_latin("apple"))  # Should return "appleyay"`
     }
 }
