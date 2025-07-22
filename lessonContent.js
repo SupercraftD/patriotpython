@@ -176,6 +176,7 @@ but if it's not assigned to anything, it works like a comment.
 print("Code with comments is easier to read!")`
     },
     "Putting it Together":{
+        img:"imgs/Exclamation-Mark-Emojis.png",
         header:`Now you have learned some basic python! Use everything we've learned in the past lessons and create your own program. Make sure to use printing, variables, user input, math and string operations, and comments!<br><br>
         Some program ideas:
         <ul>
@@ -456,6 +457,7 @@ for row in range(3):
     },
 
     "Guess the Number":{
+        img:"imgs/guessthenumber.png",
         header:`Use what you learned about loops to create a simple Guess the Number game.<br>
         Decide on a certain number, then keep getting user input until they select the correct number.<br><br>
         `,
@@ -562,6 +564,7 @@ say_name()`
     },
 
     "Fix this Program":{
+        img:"imgs/fixthisprogram.jpg",
         noExample:true,
         header: `There is a bug in the code below. Fix it.<br><br>
         <b>Hint:</b> The variable is used in the wrong namespace<br>`,
@@ -650,6 +653,7 @@ print(my_string[-5])   # o
     },
 
     "Challenge: Initials":{
+        img:"imgs/initials.png",
         noExample:true,
         header: `Write a function that has two parameters, a first name and a last name and returns the initials (like "J.D.").<br>
         Use string indexing to get the first letter of each part of the name.<br>`,
@@ -716,6 +720,7 @@ for i in range(len(my_string)):
     },
 
     "Challenge: Palindromes":{
+        img:"imgs/palindromes.jpg",
         noExample:true,
         header: `A <b>palindrome</b> is a word or phrase that reads the same forwards and backwards, like "racecar" or "level".<br>
         Write a function that checks if a given string is a palindrome.<br>`,
@@ -797,6 +802,7 @@ print(my_string.replace("World", "Python"))  # " Hello, Python! "
     },
 
     "Project: Pig Latin":{
+        img:"imgs/piglatin.jpg",
         noExample:true,
         header: `Pig Latin is a fun way to play with words! The rules are simple:
         <ul>
@@ -901,6 +907,7 @@ for index, value in enumerate(my_list):
     },
 
     "Challenge: Find List Max":{
+        img:"imgs/maxresdefault.jpg",
         noExample:true,
         header:`Write a function that takes a list of numbers and returns the maximum value in the list.<br>
         You can use a for loop to go through each item in the list and keep track of the largest number you find.<br>`,
@@ -952,6 +959,7 @@ print("Count of 4:", count)
     },
 
     "Project: Shopping List":{
+        img:"imgs/shoppinglist.png",
         noExample:true,
         header:`Create a simple shopping list program that lets the user add, remove, and view items in their list.<br>
         Use list methods like <code>append()</code> and <code>remove()</code> to manage the list.<br><br>
@@ -1046,6 +1054,7 @@ print("Evens:", evens)
     },
 
     "Challenge: List Comprehension Filtering":{
+        img:"imgs/list-comprehension-1.png",
         noExample:true,
         header:`Write a list comprehension that creates a new list containing only the even numbers from the original list.<br>`,
         code: `original = [1,2,3,4,5,6,7,8,9,10,16,18,23,20]
@@ -1139,6 +1148,7 @@ print("c is a:", c is a)  # True, because they are the same object in memory
     },
 
     "Project: Contact Book":{
+        img:"imgs/contactbook.png",
         noExample:true,
         header:`Create a simple contact book program that lets the user add, remove, and view contacts.<br>
         Each contact should have a name and a phone number, stored in a dictionary.<br>
@@ -1184,11 +1194,13 @@ while True:
 
 
     "Hangman":{
+        img:"imgs/hangman.png",
         header:`Choose a secret word. A user will guess letters in the word, one at a time. When the user guesses a letter, the program will reveal where that letter appears in the word. If the user guesses all the letters in the word, they win! However, if they make ten incorrect guesses before this happens, they lose.`,
         code:``
     },
 
     "Fill In The Blank":{
+        img:"imgs/fillintheblanks.png",
         header:`Fill In The Blank is a fun game where you fill in the blanks with words to create a silly story!<br>
         You can create your own Fill In The Blank story by defining a template with placeholders for different types of words, like nouns, verbs, and adjectives.<br>
         Then, you can ask the user to fill in those blanks with their own words.<br><br>
@@ -1199,6 +1211,7 @@ while True:
     },
 
     "Quiz Game":{
+        img:"imgs/quiz.png",
         header:`Create a simple quiz game that asks the user multiple-choice questions.<br>
         Store the questions and answers in a dictionary, where the keys are the questions and the values are lists of possible answers.<br>
         The user should be able to select an answer for each question, and at the end, show their score.<br><br>

@@ -4,6 +4,13 @@ function switchAssignment(u,l){
   document.getElementById("assignmenttitle").innerHTML = `${u+1}.${l+1}: ${units[u][l]}`;
   document.getElementById("header").innerHTML = lessonContents[units[u][l]].header;
   
+  if (lessonContents[units[u][l]].img){
+    document.getElementById("img").src = lessonContents[units[u][l]].img;
+    document.getElementById("img").style.display = "block";
+  }else{
+    document.getElementById("img").style.display = "none";
+  }
+
   if (lessonContents[units[u][l]].noExample){
     document.getElementById("code").value = lessonContents[units[u][l]].code;
   }else if (lessonContents[units[u][l]].code != ""){
