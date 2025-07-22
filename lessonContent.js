@@ -1,10 +1,16 @@
-let unitNames = ["Basic Python and Console Interaction", "Conditionals","Looping","Functions and Exceptions","Strings"]
+let unitNames = ["Basic Python and Console Interaction", "Conditionals","Looping","Functions and Exceptions","Strings","Creating and Altering Data Structures","Extending Data Structures", "Project: Guess The Word", "Project: Mad Libs","Project: Quiz Game"];
 let units = [
     ["Printing in Python","Variables and Types","User Input","Math Operators","String Operators","Comments","Putting it Together"],
     ["Booleans", "If Statements", "Comparison Operators", "Logical Operators", "Floating Point Numbers and Rounding"],
     ["While Loops","For Loops","Break and Continue","Nested Control Structures", "Guess the Number"],
     ["Functions", "Functions and Parameters", "Namespaces in Functions","Fix this Program", "Functions and Return Values","Exceptions"],
-    ["Indexing","Challenge: Initials","Slicing","Immutability","Strings and For Loops","Challenge: Palindromes","The in Keyword","String Methods","Project: Pig Latin"]
+    ["Indexing","Challenge: Initials","Slicing","Immutability","Strings and For Loops","Challenge: Palindromes","The in Keyword","String Methods","Project: Pig Latin"],
+    ["Tuples","Lists","For Loops and Lists","Challenge: Find List Max","List Methods","Project: Shopping List"],
+    ["2D Lists", "List Comprehensions", "Challenge: List Comprehension Filtering", "Packing and Unpacking", "Dictionaries", "Equivalence vs Identity", "Project: Contact Book"],
+    ["Guess the Word"],
+    ["Mad Libs"],
+    ["Quiz Game"]
+
 ];
 
 
@@ -801,5 +807,395 @@ print(my_string.replace("World", "Python"))  # " Hello, Python! "
 # Test the function
 print(pig_latin("hello"))  # Should return "ellohay"
 print(pig_latin("apple"))  # Should return "appleyay"`
+    },
+
+
+
+
+
+
+    "Tuples":{
+        header:`Tuples are a way to hold many values together in just one variable.<br>
+        They are created by putting values inside parentheses <code>()</code>, separated by commas.<br>
+        Tuples are <b>immutable</b>, which means you can’t change their values after creating them, just like strings<br>
+        You can use <code>[]</code> to access individual items in a tuple or use <code>slicing</code>, just like with strings.<br>
+        You can also use <code>len()</code> to find out how many items are in a tuple.<br><br>
+        Finally, tuples can be concatenated using the <code>+</code> operator, just like strings.<br><br>
+        Experiment with tuples below!`,
+        code: `# Creating a tuple
+my_tuple = (1, 2, 3, "hello", 4.5)
+print("My tuple:", my_tuple)
+
+# Accessing items in a tuple
+print("First item:", my_tuple[0])  # 1
+print("Last item:", my_tuple[-1])  # 4.5
+print("Slice of tuple:", my_tuple[1:4])  # (2, 3, 'hello')
+print("Length of tuple:", len(my_tuple))  # 5
+
+# Concatenating tuples
+another_tuple = (6, 7, 8)
+combined_tuple = my_tuple + another_tuple
+print("Combined tuple:", combined_tuple)`
+    },
+
+    //lesson that introduces lists, how to create them, access items, use len(), and basic operations like concatenation and slicing, their mutability, and also converting to and from strings.
+    "Lists":{
+        header:`Lists are like tuples, but they are <b>mutable</b>, which means you can change their values after creating them.<br>
+        You create a list by putting values inside square brackets <code>[]</code>, separated by commas.<br>
+        You can access items in a list using <code>[]</code> just like with tuples and strings.<br>
+        You can also use <code>len()</code> to find out how many items are in a list.<br><br>
+        Lists can be concatenated using the <code>+</code> operator, and you can slice them just like strings.<br>
+        You can also convert lists to strings using the <code>join()</code> method, and convert strings to lists using the <code>split()</code> or <code>list()</code> method.<br><br>
+        Try out the examples below!`,
+        code: `# Creating a list
+my_list = [1, 2, 3, "hello", 4.5]
+print("My list:", my_list)
+
+# Accessing items in a list
+print("First item:", my_list[0])  # 1
+print("Last item:", my_list[-1])  # 4.5
+print("Slice of list:", my_list[1:4])  # [2, 3, 'hello']
+
+# Finding the length of a list
+print("Length of list:", len(my_list))  # 5
+
+# Concatenating lists
+another_list = [6, 7, 8]
+combined_list = my_list + another_list
+print("Combined list:", combined_list)
+
+# Converting a list to a string
+list_string = ", ".join(map(str, my_list))
+print("List as string:", list_string)
+
+# Converting a string to a list
+string_list = "hello world".split()
+print("String as list:", string_list)
+
+# Converting a string to a list using list()
+char_list = list("hello")
+print("String to list of characters:", char_list)`
+    },
+
+    //lesson about how to iterate over lists with for loops, using range and len, and enumerate
+    "For Loops and Lists":{
+        header:`You can use <b>for loops</b> to go through each item in a list.<br>
+        You can use <code>range()</code> and <code>len()</code> to loop through the indexes of the list, like a string. Or, you can use <code>enumerate()</code> to get both the index and the value at the same time.<br><br>
+        Experiment with the code below!`,
+        code: `# Using a for loop to iterate over a list
+my_list = [1, 2, 3, 4, 5]
+for item in my_list:
+    print("Item:", item)
+
+# Using range() and len() to iterate over a list
+for i in range(len(my_list)):
+    print("Index:", i, "Value:", my_list[i])
+
+# Using enumerate() to get both index and value
+for index, value in enumerate(my_list):
+    print("Index:", index, "Value:", value)`
+    },
+
+    "Challenge: Find List Max":{
+        header:`Write a function that takes a list of numbers and returns the maximum value in the list.<br>
+        You can use a for loop to go through each item in the list and keep track of the largest number you find.<br>`,
+        code: `def find_max(numbers):
+    #write your own code here!
+
+# Test the function
+print(find_max([1, 2, 3, 4, 5]))  # Should return 5
+print(find_max([10, 20, 5, 30, 15]))  # Should return 30
+`
+    },
+
+    //review on methods and introduce new list methods like append, remove, sort, reverse, count
+    "List Methods":{
+        header:`Lists have many useful methods that let you change or check the list.<br>
+        Here are some common list methods:<br>
+        <ul>
+            <li><code>append()</code> : Adds an item to the end of the list</li>
+            <li><code>remove()</code> : Removes the first occurrence of an item from the list</li>
+            <li><code>sort()</code> : Sorts the items in the list in ascending order</li>
+            <li><code>reverse()</code> : Reverses the order of items in the list</li>
+            <li><code>count()</code> : Counts how many times an item appears in the list</li>
+        </ul>
+        Try out these methods below!`,
+        code: `# Example list
+my_list = [3, 1, 4, 1, 5, 9]
+print("Original list:", my_list)
+
+# append(): Adds an item to the end of the list
+my_list.append(6)
+print("After append:", my_list)
+
+# remove(): Removes the first occurrence of an item from the list
+my_list.remove(1)
+print("After remove:", my_list)
+
+# sort(): Sorts the items in the list in ascending order
+my_list.sort()
+print("After sort:", my_list)
+
+# reverse(): Reverses the order of items in the list
+my_list.reverse()
+print("After reverse:", my_list)
+
+# count(): Counts how many times an item appears in the list
+count = my_list.count(4)
+print("Count of 4:", count)
+`
+    },
+
+    "Project: Shopping List":{
+        header:`Create a simple shopping list program that lets the user add, remove, and view items in their list.<br>
+        Use list methods like <code>append()</code> and <code>remove()</code> to manage the list.<br><br>
+        Some starter code to manage a menu and user input has been provided. Fill in the blank functions:<br>`,
+        code: `shopping_list = []
+
+def show_menu():
+    print("1. Add item")
+    print("2. Remove item")
+    print("3. View list")
+    print("4. Quit")
+
+# replace these functions with your own code.
+
+def add_item(item):
+    # append the item to the shopping list!
+    pass
+
+def remove_item(item):
+    #remove the item from the shopping list!
+    pass
+
+def view_list():
+    #print out each item in the shopping list!
+    pass
+
+#Starter code to manage the menu and user input. Can you understand it?
+while True:
+    show_menu()
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        item = input("Enter item to add: ")
+        add_item(item)
+    elif choice == "2":
+        item = input("Enter item to remove: ")
+        remove_item(item)
+    elif choice == "3":
+        view_list()
+    elif choice == "4":
+        break
+    else:
+        print("Invalid choice. Please try again.")
+`
+    },
+
+    "2D Lists":{
+        header:`2D lists are lists of lists, which lets you create a grid or table-like structure.<br>
+        You can think of it like a matrix, where each item is accessed by two indexes: one for the row and one for the column.<br><br>
+        You can create a 2D list by nesting lists inside another list. You can access items using <code>list[row][column]</code>.<br>
+        You can also use loops to go through each row and column in the 2D list.<br><br>
+        Hint: if you are ever confused, just remember it is a list of lists, so you can access the inner lists just like you would with a normal list and do all the same things.<br><br>
+        Try out the examples below!`,
+        code: `# Creating a 2D list (a grid)
+grid = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# Accessing items
+print("Item at (0, 0):", grid[0][0])
+print("Item at (1, 1):", grid[1][1])
+print("Item at (2, 2):", grid[2][2])
+
+# Looping through the whole grid
+for row in grid:
+    for col in row:
+        print(col)
+`
+    },
+
+    "List Comprehensions":{
+        header:`List comprehensions let you create lists in a more compact way using a single line.<br>
+        They are a powerful way to generate lists based on existing lists or ranges.<br><br>
+        The syntax is <code>[expression for item in iterable if condition]</code>, where:
+        <ul>
+            <li><b>expression</b> is what you want to put in the new list</li>
+            <li><b>item</b> is the current item from the iterable (like a list or range)</li>
+            <li><b>iterable</b> is the collection you are looping through</li>
+            <li><b>condition</b> is optional and filters which items to include</li>
+        </ul>
+        List comprehensions can make your code shorter and easier to read.<br>
+        Try out the examples below and see how they work!`,
+        code: `# Basic list comprehension
+squares = [x**2 for x in range(10)]
+print("Squares:", squares)
+
+# List comprehension with a condition
+evens = [x for x in range(10) if x % 2 == 0]
+print("Evens:", evens)
+`
+    },
+
+    "Challenge: List Comprehension Filtering":{
+        header:`Write a list comprehension that creates a new list containing only the even numbers from the original list.<br>`,
+        code: `original = [1,2,3,4,5,6,7,8,9,10,16,18,23,20]
+evens = [] #fill in your list comprehension line!`
+    },
+
+    "Packing and Unpacking":{
+        header:`Packing and unpacking lets you easily work with multiple values at once.<br>
+        Packing means putting multiple values into a single variable, like a tuple or list.<br>
+        Unpacking means taking those values out and assigning them to separate variables.<br><br>
+        You can use packing and unpacking with tuples, lists, and even function arguments.<br><br>
+
+        Assigning multiple variables at once to a list or tuple is called unpacking.<br>
+        You can also use the <code>*</code> operator to unpack a list or tuple into multiple variables.<br><br>
+        Try out the examples below to see how packing and unpacking works!`,
+        code: `# Packing values
+x=1
+y=2
+z=3
+packed = (x, y, z)
+print("Packed tuple:", packed)
+
+# Unpacking values
+a, b, c = packed
+print("Unpacked values:", a, b, c)
+
+#This function takes two parameters
+def add_two_numbers(a, b):
+    print(a+b)
+
+nums = [1,2]
+add_two_numbers(*nums)  # Unpacking the list into the function parameters
+`
+    },
+
+    "Dictionaries":{
+        header:`Dictionaries are a way to store data in pairs, like a real-life dictionary.<br>
+        Each pair has a <b>key</b> and a <b>value</b>, where the key is like a word and the value is its definition.<br>
+        You create a dictionary using curly braces <code>{}</code> with key-value pairs separated by commas, like <code>{"key": "value"}</code>.<br><br>
+        Keys are like indexes in strings or lists, but they can be any immutable type (like strings, numbers, or tuples).<br><br>
+        You can access values in a dictionary using the key inside square brackets <code>dict[key]</code>.<br><br>
+        The <code>in</code> keyword can be used to check if a key exists in the dictionary.<br>
+        It can also be used in for loops to iterate over the keys in the dictionary.<br><br>
+        Explore this example`,
+
+        code: `# Creating a dictionary
+my_dict = {
+    "name": "Alice",
+    "age": 30,
+    "city": "Wonderland"
+}
+print("My dictionary:", my_dict)
+
+# Accessing values by key
+print("Name:", my_dict["name"])
+print("Age:", my_dict["age"])
+print("City:", my_dict["city"])
+
+# Checking if a key exists
+if "name" in my_dict:
+    print("Name key exists!")
+
+# Iterating over keys in the dictionary
+for key in my_dict:
+    print("Key:", key, "Value:", my_dict[key])
+
+#updating a value
+my_dict["age"] = 31
+print("Updated age:", my_dict["age"])
+`
+    },
+
+    "Equivalence vs Identity":{
+        header:`In Python, there are two ways to compare objects: <b>equivalence</b> and <b>identity</b>.<br>
+        Equivalence checks if two objects have the same value, while identity checks if they are the exact same object in memory.<br><br>
+        You can use <code>==</code> to check equivalence and <code>is</code> to check identity.<br><br>
+        Try running the code below to see how equivalence and identity work!`,
+
+        code: `# Equivalence
+a = [1, 2, 3]
+b = [1, 2, 3]
+print("a == b:", a == b)  # True, because they have the same content
+
+# Identity
+print("a is b:", a is b)  # False, because they are different objects in memory
+
+# Identity with the same object
+c = a
+print("c is a:", c is a)  # True, because they are the same object in memory
+`
+    },
+
+    "Project: Contact Book":{
+        header:`Create a simple contact book program that lets the user add, remove, and view contacts.<br>
+        Each contact should have a name and a phone number, stored in a dictionary.<br>
+        Use the <code>in</code> keyword to check if a contact exists before removing it.<br><br>
+        Some starter code to manage a menu and user input has been provided. Fill in the blank functions:<br>`,
+        code: `contacts = {}
+
+def add_contact(name, phone):
+    pass
+
+def remove_contact(name):
+    pass
+
+def view_contacts():
+    pass
+
+#menu code
+def show_menu():
+    print("1. Add contact")
+    print("2. Remove contact")
+    print("3. View contacts")
+    print("4. Exit")
+
+while True:
+    show_menu()
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        name = input("Enter name: ")
+        phone = input("Enter phone number: ")
+        add_contact(name, phone)
+    elif choice == "2":
+        name = input("Enter name to remove: ")
+        remove_contact(name)
+    elif choice == "3":
+        view_contacts()
+    elif choice == "4":
+        print("Exiting...")
+        break
+    else:
+        print("Invalid choice. Please try again.")`
+    },
+
+
+
+    "Guess the Word":{
+        header:`Choose a secret word. A user will guess letters in the word, one at a time. When the user guesses a letter, the program will reveal where that letter appears in the word. If the user guesses all the letters in the word, they win! However, if they make ten incorrect guesses before this happens, they lose.`,
+        code:``
+    },
+
+    "Mad Libs":{
+        header:`Mad Libs is a fun game where you fill in the blanks with words to create a silly story!<br>
+        You can create your own Mad Libs story by defining a template with placeholders for different types of words, like nouns, verbs, and adjectives.<br>
+        Then, you can ask the user to fill in those blanks with their own words.<br><br>
+        Store the user's responses and use it to fill in the template.<br>
+        Create your own Mad Libs story!`,
+
+        code: ``
+    },
+
+    "Quiz Game":{
+        header:`Create a simple quiz game that asks the user multiple-choice questions.<br>
+        Store the questions and answers in a dictionary, where the keys are the questions and the values are lists of possible answers.<br>
+        The user should be able to select an answer for each question, and at the end, show their score.<br><br>
+        There should be at least 3 questions, with 3 answer choices each.<br>
+        Hint: Look at previous projects for how to use dictionaries and menu code.`,
+        code: ``
     }
 }
