@@ -1,4 +1,4 @@
-let unitNames = ["Basic Python and Console Interaction", "Conditionals","Looping","Functions and Exceptions","Strings","Creating and Altering Data Structures","Extending Data Structures", "Project: Guess The Word", "Project: Mad Libs","Project: Quiz Game"];
+let unitNames = ["Basic Python and Console Interaction", "Conditionals","Looping","Functions and Exceptions","Strings","Creating and Altering Data Structures","Extending Data Structures", "Project: Hangman", "Project: Fill In The Blank","Project: Quiz Game"];
 let units = [
     ["Printing in Python","Variables and Types","User Input","Math Operators","String Operators","Comments","Putting it Together"],
     ["Booleans", "If Statements", "Comparison Operators", "Logical Operators", "Floating Point Numbers and Rounding"],
@@ -7,8 +7,8 @@ let units = [
     ["Indexing","Challenge: Initials","Slicing","Immutability","Strings and For Loops","Challenge: Palindromes","The in Keyword","String Methods","Project: Pig Latin"],
     ["Tuples","Lists","For Loops and Lists","Challenge: Find List Max","List Methods","Project: Shopping List"],
     ["2D Lists", "List Comprehensions", "Challenge: List Comprehension Filtering", "Packing and Unpacking", "Dictionaries", "Equivalence vs Identity", "Project: Contact Book"],
-    ["Guess the Word"],
-    ["Mad Libs"],
+    ["Hangman"],
+    ["Fill In The Blank"],
     ["Quiz Game"]
 
 ];
@@ -1175,17 +1175,17 @@ while True:
 
 
 
-    "Guess the Word":{
+    "Hangman":{
         header:`Choose a secret word. A user will guess letters in the word, one at a time. When the user guesses a letter, the program will reveal where that letter appears in the word. If the user guesses all the letters in the word, they win! However, if they make ten incorrect guesses before this happens, they lose.`,
         code:``
     },
 
-    "Mad Libs":{
-        header:`Mad Libs is a fun game where you fill in the blanks with words to create a silly story!<br>
-        You can create your own Mad Libs story by defining a template with placeholders for different types of words, like nouns, verbs, and adjectives.<br>
+    "Fill In The Blank":{
+        header:`Fill In The Blank is a fun game where you fill in the blanks with words to create a silly story!<br>
+        You can create your own Fill In The Blank story by defining a template with placeholders for different types of words, like nouns, verbs, and adjectives.<br>
         Then, you can ask the user to fill in those blanks with their own words.<br><br>
         Store the user's responses and use it to fill in the template.<br>
-        Create your own Mad Libs story!`,
+        Create your own Fill In The Blank story!`,
 
         code: ``
     },
