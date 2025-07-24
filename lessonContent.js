@@ -1,4 +1,4 @@
-let unitNames = ["Basic Python and Console Interaction", "Conditionals","Looping","Functions and Exceptions","Strings","Creating and Altering Data Structures","Extending Data Structures", "Project: Hangman", "Project: Fill In The Blank","Project: Quiz Game"];
+let unitNames = ["Basic Python and Console Interaction", "Conditionals","Looping","Functions and Exceptions","Strings","Creating and Altering Data Structures","Extending Data Structures", "Project: Hangman", "Project: Fill In The Blank","Project: Quiz Game", "Math Games", "Board Games"];
 let units = [
     ["Printing in Python","Variables and Types","User Input","Math Operators","String Operators","Comments","Putting it Together"],
     ["Booleans", "If Statements", "Comparison Operators", "Logical Operators", "Floating Point Numbers and Rounding"],
@@ -9,7 +9,9 @@ let units = [
     ["2D Lists", "List Comprehensions", "Challenge: List Comprehension Filtering", "Packing and Unpacking", "Dictionaries", "Equivalence vs Identity", "Project: Contact Book"],
     ["Hangman"],
     ["Fill In The Blank"],
-    ["Quiz Game"]
+    ["Quiz Game"],
+    ["Project: Fractions","Project: Calculator","Project: Fibonacci","Project: Number Systems", "Project: Geometry", "Project: Lock Combinations"],
+    ["Project: Tic Tac Toe", "Project: Connect Four", "Project: Rock Paper Scissors", "Project: Battleship"]
 
 ];
 
@@ -1246,5 +1248,96 @@ while True:
         There should be at least 3 questions, with 3 answer choices each.<br>
         Hint: Look at previous projects for how to use dictionaries and menu code.`,
         code: ``
+    },
+
+
+
+
+    "Project: Fractions":{
+        header:`Create a simple program that lets the user input a fraction and simplify it.<br><br>
+        HINT: You can represent fractions as tuples, where the first element is the numerator and the second element is the denominator.<br>
+        You can also look in previous lessons for how to create menus and user input.`,
+        code:``
+    },
+
+    "Project: Calculator":{
+        header:`Create a simple calculator program that can add, subtract, multiply, and divide two numbers.<br>
+        Use functions for each operation and a menu to let the user choose which operation to perform.`,
+        code:``
+    },
+
+    "Project: Fibonacci":{
+        header:`The fibonacci sequence is a series of numbers where each number is the two previous numbers added together, starting with 0 and 1.<br>
+        For example, the first few numbers in the sequence are: 0, 1, 1, 2, 3, 5, 8, 13, 21...<br><br>
+        Create a program that generates the Fibonacci sequence up to a certain amount of times, that the user inputs.<br>`,
+        code:``
+    },
+
+    "Project: Number Systems":{
+        header:`Create a program that converts numbers between different number systems: binary, octal, decimal, and hexadecimal.<br>
+        The user should be able to input a number in one system (chosen with a menu) and get the equivalent value in the other systems.<br><br>
+        You can use built-in functions like <code>bin()</code>, <code>hex()</code>, and <code>int()</code> to help with the conversions.<br>
+        <a href="https://www.categories.acsl.org/wiki/index.php?title=Computer_Number_Systems" target="_blank">Click here for more information on number systems</a>`,
+        code:``
+    },
+
+    "Project: Geometry":{
+        header:`Create a program that calculates the area and perimeter of different geometric shapes: Square, Parallelogram, and Triangle.<br>
+        The user should be able to choose a shape and input the necessary dimensions.<br>
+        Formulas:
+        <ul>
+            <li>Square: Area = side^2, Perimeter = 4 * side</li>
+            <li>Parallelogram: Area = base * height, Perimeter = 2 * (base + side)</li>
+            <li>Triangle: Area = 0.5 * base * height, Perimeter = a + b + c (where a, b, c are the lengths of the sides)</li>
+        </ul>`,
+        code:``
+    },
+
+    "Project: Lock Combinations":{
+        header:`Create a program that outputs all the possible combinations for a lock with 3 digits.<br>`,
+        code:``
+    },
+
+    "Project: Tic Tac Toe":{
+        header:`Create a simple Tic Tac Toe game that lets two players play against each other.<br>
+        The game should display the board, take turns for each player, and check for a win or a draw.<br>
+        Use a 2D list to represent the board and functions to handle the game logic.<br><br>
+        Tic Tac Toe is played on a 3x3 grid, where players take turns placing their marks (X or O) in empty squares.<br>
+        The first player to get three of their marks in a row (horizontally, vertically, or diagonally) wins the game.<br>
+        If all squares are filled and no player has won, the game is a draw.<br><br>
+        You can use the previous lessons on lists and loops to help with this project.`,
+        code:``
+    },
+
+    "Project: Connect Four":{
+        header:`Create a Connect Four game that lets two players play against each other.<br>
+        The game should display the board, take turns for each player, and check for a win or a draw.<br>
+        Use a 2D list to represent the board and functions to handle the game logic.<br><br>
+        Connect Four is played on a 6x7 grid, where players take turns dropping their discs into columns.<br>
+        The first player to get four of their discs in a row (horizontally, vertically, or diagonally) wins the game.<br>
+        If all columns are filled and no player has won, the game is a draw.<br><br>
+        You can use the previous lessons on lists and loops to help with this project.`,
+        code:``
+    },
+
+    "Project: Rock Paper Scissors":{
+        header:`Create a Rock Paper Scissors game that lets the user play against the computer.<br>
+        The user should be able to choose rock, paper, or scissors, and the computer will randomly choose one as well.<br>
+        The game should determine the winner based on the rules: rock beats scissors, scissors beats paper, and paper beats rock.<br><br>
+        You can use the <code>random</code> module to generate the computer's choice. See the starter code to see how it's used.<br>`,
+        code: `import random
+print(random.randint(1,3))  # Generates a random number between 1 and 3`
+    },
+
+    "Project: Battleship":{
+        header:`Create a Battleship game that lets two players play against each other.<br>
+        The game should display a grid for each player and allow them to place their ships on the grid.<br>
+        Players will take turns guessing the locations of each other's ships.<br>
+        The game should keep track of hits and misses, and declare a winner when all of one player's ships have been sunk.<br><br>
+        You can use a 2D list to represent the game grid and functions to handle the game logic.<br><br>
+        Battleship is played on a 10x10 grid, where players place their ships and take turns guessing the locations of each other's ships.<br>
+        There are typically 5 ships of different lengths: 2, 3, 3, 4, and 5.<br>
+        The first player to sink all of the opponent's ships wins the game.<br><br>`,
+        code:``
     }
 }
