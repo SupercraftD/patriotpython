@@ -1,4 +1,4 @@
-let unitNames = ["Basic Python and Console Interaction", "Conditionals","Looping","Functions and Exceptions","Strings","Creating and Altering Data Structures","Extending Data Structures", "Project: Hangman", "Project: Fill In The Blank","Project: Quiz Game", "Math Games", "Board Games"];
+let unitNames = ["Basic Python and Console Interaction", "Conditionals","Looping","Functions and Exceptions","Strings","Creating and Altering Data Structures","Extending Data Structures", "Project: Hangman", "Project: Fill In The Blank","Project: Quiz Game", "Math Games", "Board Games","String Games"];
 let units = [
     ["Printing in Python","Variables and Types","User Input","Math Operators","String Operators","Comments","Putting it Together"],
     ["Booleans", "If Statements", "Comparison Operators", "Logical Operators", "Floating Point Numbers and Rounding"],
@@ -11,7 +11,8 @@ let units = [
     ["Fill In The Blank"],
     ["Quiz Game"],
     ["Project: Fractions","Project: Calculator","Project: Fibonacci","Project: Number Systems", "Project: Geometry", "Project: Lock Combinations"],
-    ["Project: Tic Tac Toe", "Project: Connect Four", "Project: Rock Paper Scissors", "Project: Battleship"]
+    ["Project: Tic Tac Toe", "Project: Connect Four", "Project: Rock Paper Scissors", "Project: Battleship"],
+    ["Project: Text-Based Adventure Game", "Project: Fraction, Percent, Decimal, Ratio"]
 
 ];
 
@@ -1338,6 +1339,20 @@ print(random.randint(1,3))  # Generates a random number between 1 and 3`
         Battleship is played on a 10x10 grid, where players place their ships and take turns guessing the locations of each other's ships.<br>
         There are typically 5 ships of different lengths: 2, 3, 3, 4, and 5.<br>
         The first player to sink all of the opponent's ships wins the game.<br><br>`,
+        code:``
+    },
+
+
+    "Project: Text-Based Adventure Game":{
+        header:`Create a simple text-based adventure game where the player can explore different rooms, collect items, and solve puzzles.<br>
+        Include a basic storyline and choices that lead to different outcomes and endings.<br><br>
+        HINT: You can use dictionaries and lists to represent rooms and items, and tuples to represent the player's location.<br>
+        Use your imagination and creativity!`,
+        code:``
+    },
+
+    "Project: Fraction, Percent, Decimal, Ratio":{
+        header:`Create a program that lets a user input a fraction, and then converts it to a decimal, percent, and ratio.<br>`,
         code:``
     }
 }
